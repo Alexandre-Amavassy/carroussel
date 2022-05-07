@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Oswald:wght@300&display=swap');
+
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+	padding: 0 2%;
+	margin: 0;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	position: sticky;
+	top: 0;
+}
+nav .profile {
+	display: flex;
+	align-items: center;
+}
+nav .profile img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+nav .profile h1 {
+	margin-left: 10px;
+	font-size: 15px;
+}
+nav ul {
+	display: flex;
+	list-style-type: none;
+}
+nav ul li {
+	margin-left: 20px;
+	cursor: pointer;
+	border-bottom: 1px solid #fff;
+}
+nav ul li:hover {
+	border-bottom-color: #000;
+}
+a{
+    color: black;
+}
+
+.page-content {
+	margin: 4%;
+}
+.page-content header {
+	margin-top: 5%;
+	max-width: 80%;
+}
+.page-content header h1 {
+	margin: 0;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 6vw;
+}
+.page-content header p {
+	line-height: 30px;
+	color: #818181;
+}
+.page-content header button {
+	background-color: inherit;
+	border: none;
+	outline: none;
+	padding: 0;
+	font-size: 15px;
+	font-weight: bold;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+}
+.page-content header button:hover {
+	color: #ccc;
+	border-bottom-color: #000;
+}
+.page-content .presentation-image {
+	margin-top: 5%;
+}
+.page-content .presentation-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.page-content .projects-section {
+	margin-top: 6%;
+}
+.page-content .projects-section h1 {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 3vw;
+}
+.page-content .projects-section .projects {
+	display: flex;
+	flex-wrap: wrap;
+}
+.page-content .projects-section .project {
+	margin-right: 20px;
+	max-width: 195px;
+}
+.page-content .projects-section .project h4 {
+	margin: 0;
+}
+.page-content .projects-section .project .description {
+	font-size: 10px;
+}
+.page-content .projects-section .project .dates {
+	font-size: 13px;
+	color: rgb(145, 145, 145);
+}
+
+footer {
+	margin-top: 15%;
+	display: flex;
+	flex-wrap: wrap;
+	bottom: 0;
+	justify-content: space-around;
+	padding: 10px;
+	background-color: #000;
+	color: white;
+}
+footer .colonne p {
+	font-size: 12px;
+	color: #ccc;
+	cursor: pointer;
+}
+footer .colonne p:hover {
+	color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+	nav {
+		justify-content: center;
+	}
+	nav ul {
+		display: none;
+	}
+
+	.page-content header {
+		margin-top: 10%;
+		max-width: 100%;
+	}
+	.page-content .projects-section {
+		margin-top: 15%;
+	}
+	.page-content .projects-section h1 {
+		font-size: 1.5em;
+	}
+	.page-content .projects-section .project {
+		margin-right: 0;
+		margin-bottom: 20px;
+		max-width: 100%;
+	}
+	.page-content .projects-section .project .description {
+		font-size: 13px;
+	}
+
+	footer {
+		justify-content: flex-start;
+	}
+	footer .column {
+		width: 100%;
+	}
+}
+
+
+
+
+
+/*****carrousel 3d avec navigation*****/
+
+*{box-sizing: border-box}
+
+
+img{max-width:100%}
+	
+	
+	
+	
+	
+.caroussel_diapo input{position:absolute;left:-9999px}
+    
+
+.caroussel_diapo{	
+position:relative;
+text-align:center;
+margin:0 auto}
+
+
+.contenu_carou {
+
+width:500px;
+height:362px;
+margin-left: 600px;
+margin-top: 2%;
+
+
+perspective:4000px}
+
+
+.caroussel{
+
+transform-style:preserve-3d;
+position:relative;
+width:500px;
+height:332px;
+transition:1s
+	
+	}
+
+.caroussel img {
+	
+position:absolute;
+top:0;left:0;
+outline:1px solid transparent;
+backface-visibility:hidden;
+transition:1s
+	
+	}
+
+.caroussel img{filter:blur(3px);opacity:.8}	
+.caroussel img:nth-child(1){transform:translate3d(0,0,540px) scale(.8)}
+.caroussel img:nth-child(2){transform:rotateY(45deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(3){transform:rotateY(90deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(4){transform:rotateY(135deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(5){transform:rotateY(180deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(6){transform:rotateY(225deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(7){transform:rotateY(270deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(8){transform:rotateY(315deg) translateZ(540px) scale(.8)}
+
+.caroussel_diapo input[type=radio] + label {
+	
+cursor:pointer;
+margin-top: 5%;
+background:rgb(0, 0, 0);
+display:inline-block;
+width:20px;
+border-radius:50%;
+height:20px
+	
+	}
+	
+.caroussel_diapo input[type=radio]:checked + label{background:rgb(177, 178, 179)}
+
+.caroussel_diapo label{background:rgb(153, 153, 153)}
+
+
+
+.caroussel_diapo input[name="rotation"]:checked ~ .contenu_carou .caroussel img:nth-child(n){
+	filter:drop-shadow(12px 12px 7px hsla(0,0%,0%,.5))
+	
+	}	
+
+/*gauche*/
+.caroussel_diapo #carou_un:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px)}
+.caroussel_diapo #carou_deux:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-45deg)}
+.caroussel_diapo #carou_trois:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-90deg)}
+.caroussel_diapo #carou_quatre:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-135deg)}
+.caroussel_diapo #carou_cinq:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-180deg)}
+.caroussel_diapo #carou_six:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-225deg)}
+.caroussel_diapo #carou_sept:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-270deg)}
+.caroussel_diapo #carou_huit:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-315deg)}
+
+
+/*droite*/
+.caroussel_diapo #carou_un:checked ~ .contenu_carou .caroussel img:nth-child(1){transform:translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_deux:checked ~ .contenu_carou .caroussel img:nth-child(2){transform:rotateY(45deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_trois:checked ~ .contenu_carou .caroussel img:nth-child(3){transform:rotateY(90deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_quatre:checked ~ .contenu_carou .caroussel img:nth-child(4){transform:rotateY(135deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_cinq:checked ~ .contenu_carou .caroussel img:nth-child(5){transform:rotateY(180deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_six:checked ~ .contenu_carou .caroussel img:nth-child(6){transform:rotateY(225deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_sept:checked ~ .contenu_carou .caroussel img:nth-child(7){transform:rotateY(270deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_huit:checked ~ .contenu_carou .caroussel img:nth-child(8){transform:rotateY(315deg) translateZ(540px) scale(1);opacity:1}
